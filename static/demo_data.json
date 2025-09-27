@@ -1,0 +1,133 @@
+{
+  "demo_patients": [
+    {
+      "name": "John Smith - Diabetic Nephropathy",
+      "input": {
+        "primary_diagnosis": "diabetes mellitus",
+        "clinical_notes": "65-year-old male with type 2 diabetes mellitus for 15 years. Recent labs show creatinine 1.8, BUN 45, microalbuminuria present. HbA1c 8.2%. Patient on metformin and glipizide. Complains of fatigue and ankle swelling.",
+        "current_icd": "E11.9",
+        "patient_history": "HTN, obesity, family history of diabetes"
+      },
+      "expected_output": {
+        "best_icd": "E11.22",
+        "hcc_code": "HCC 37",
+        "raf_improvement": 0.198,
+        "annual_value": 3366
+      }
+    },
+    {
+      "name": "Maria Garcia - Heart Failure",
+      "input": {
+        "primary_diagnosis": "shortness of breath",
+        "clinical_notes": "72-year-old female presents with progressively worsening dyspnea on exertion, orthopnea, and bilateral lower extremity edema. Echo shows EF 35%. BNP elevated at 800. Currently on furosemide.",
+        "current_icd": null,
+        "patient_history": "MI 2 years ago, hypertension, diabetes"
+      },
+      "expected_output": {
+        "best_icd": "I50.9",
+        "hcc_code": "HCC 223",
+        "raf_improvement": 0.323,
+        "annual_value": 5491
+      }
+    },
+    {
+      "name": "Robert Johnson - Depression Severity",
+      "input": {
+        "primary_diagnosis": "depression",
+        "clinical_notes": "58-year-old male reports persistent depressed mood, anhedonia, fatigue, and sleep disturbances for 10 weeks. PHQ-9 score of 15. Significant functional impairment at work and home. No suicidal ideation.",
+        "current_icd": "F32.0",
+        "patient_history": "Previous episode of depression 5 years ago, responded well to sertraline"
+      },
+      "expected_output": {
+        "best_icd": "F32.1",
+        "hcc_code": "HCC 155",
+        "raf_improvement": 0.309,
+        "annual_value": 5253
+      }
+    },
+    {
+      "name": "Lisa Chen - Kidney Transplant Status",
+      "input": {
+        "primary_diagnosis": "routine follow-up",
+        "clinical_notes": "45-year-old female with history of kidney transplant 3 years ago due to polycystic kidney disease. Currently stable on tacrolimus and mycophenolate. Creatinine stable at 1.2. No signs of rejection.",
+        "current_icd": null,
+        "patient_history": "ESRD secondary to polycystic kidney disease, kidney transplant 2021"
+      },
+      "expected_output": {
+        "best_icd": "Z94.0",
+        "hcc_code": "HCC 274",
+        "raf_improvement": 0.525,
+        "annual_value": 8925
+      }
+    },
+    {
+      "name": "William Brown - COPD Exacerbation",
+      "input": {
+        "primary_diagnosis": "breathing problems",
+        "clinical_notes": "68-year-old male with history of COPD presents with acute worsening of dyspnea, increased sputum production, and wheezing. Chest X-ray shows hyperinflation. Currently using albuterol and ipratropium inhalers.",
+        "current_icd": "J44.9",
+        "patient_history": "50 pack-year smoking history, quit 2 years ago"
+      },
+      "expected_output": {
+        "best_icd": "J44.1",
+        "hcc_code": "HCC 287",
+        "raf_improvement": 0.328,
+        "annual_value": 5576
+      }
+    }
+  ],
+  "common_coding_mistakes": [
+    {
+      "mistake": "Using E11.9 for all diabetes",
+      "correction": "Specify complications (E11.22 for kidney disease)",
+      "raf_impact": 0.198
+    },
+    {
+      "mistake": "Missing transplant status codes",
+      "correction": "Always code Z94.x for transplant patients",
+      "raf_impact": 0.525
+    },
+    {
+      "mistake": "Coding depression as mild when moderate",
+      "correction": "Use PHQ-9 scores to determine severity",
+      "raf_impact": 0.309
+    },
+    {
+      "mistake": "Not coding chronic kidney disease stages",
+      "correction": "Specify CKD stage (N18.31, N18.4, N18.5)",
+      "raf_impact": 0.675
+    }
+  ],
+  "hcc_categories_by_value": [
+    {
+      "category": "Kidney Transplant Status",
+      "hcc_code": "HCC 274",
+      "raf_weight": 0.525,
+      "annual_value": 8925
+    },
+    {
+      "category": "CKD Stage 5",
+      "hcc_code": "HCC 325",
+      "raf_weight": 0.675,
+      "annual_value": 11475
+    },
+    {
+      "category": "CKD Stage 4",
+      "hcc_code": "HCC 326",
+      "raf_weight": 0.421,
+      "annual_value": 7157
+    },
+    {
+      "category": "COPD",
+      "hcc_code": "HCC 287",
+      "raf_weight": 0.328,
+      "annual_value": 5576
+    },
+    {
+      "category": "Congestive Heart Failure",
+      "hcc_code": "HCC 223",
+      "raf_weight": 0.323,
+      "annual_value": 5491
+    }
+  ]
+}
