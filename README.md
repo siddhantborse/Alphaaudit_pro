@@ -40,12 +40,12 @@ uvicorn app:app --reload --port 8000
 streamlit run frontend/streamlit_app.py --server.port 8501
 ```
 
-## 🎭 Competition Demo Script
+## Demo Script
 
-### Opening Hook (30 seconds)
+### Opening Hook 
 > "Every year, $20 billion in healthcare reimbursements are lost due to incomplete medical documentation. We're solving this with MediCode AI - an empathy-first solution that transforms how physicians document patient care."
 
-### Demo Flow (3-4 minutes)
+### Demo Flow 
 
 1. **Show Empathy-First Design**
    - Professional medical-grade interface
@@ -73,7 +73,7 @@ streamlit run frontend/streamlit_app.py --server.port 8501
    - 95% confidence score
    - MEAT documentation guidance
 
-### Closing Impact (60 seconds)
+### Closing Impact
 > "MediCode AI doesn't just solve a technical problem - it transforms healthcare. By reducing administrative burden, we help physicians focus on what matters most: their patients. This scales across healthcare networks, recovering billions in reimbursements while improving care quality."
 
 ## 🏆 Competition Win Factors
