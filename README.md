@@ -8,7 +8,7 @@
 **Challenge**: Create solutions with inclusive, ethical, and sustainable social impact  
 **Technology**: AI + Intelligent Data Ecosystems  
 
-## 💡 Our Solution: MediCode AI
+## 💡 Our Solution: Alpha Audit Pro - AI solution for ASSISTING MEDICAL CODERS 
 
 An **empathy-first** AI assistant that helps physicians identify optimal HCC (Hierarchical Condition Category) codes in real-time, solving a **$20+ billion annual problem** in US healthcare reimbursements.
 
